@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<title>Mi primer web</title>
+</head>
+<body>
+	<h1>Titulo de mi web</h1>
+	<h2>Bienvenido a mi web </h2>
+	<p>
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <br/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	</p>
+	<p>
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	</p>
+	<hr/>
+	<h2>Imagenes en html</h2>
+	<img alt="imagen de prueba" src="imagenes/img7.jpg" title="imagen test"  height="100px"/>
+	<hr/>
+	<h3>Tercer encabezado</h3>
+	<p>
+		<strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</strong>, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <em>It has survived not only five centuries, <blockquote>but also the leap into electronic typesetting</blockquote>, remaining essentially unchanged.</em> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, <span id="resaltado" class="rojo amarillo">and more recently with desktop publishing software </span> like Aldus PageMaker <i> including versions of Lorem Ipsum.</i>
+		
+		
+	</p>
+	<hr/>
+	<h3>Lista ordenada</h3>
+	<ol>
+		<li>manzana</li>
+		<li>platano</li>
+		<li>papaya</li>
+		<li>pera</li>
+	</ol>
+		
+	<h3>Lista desordenada</h3>
+	<ul>
+		<li>manzana
+			<ul>
+				<li>roja</li>
+				<li>verde</li>
+			</ul>
+		</li>
+		<li>platano</li>
+		<li>papaya</li>
+		<li>pera</li>
+	</ul>
+	<hr/>
+	<h3>Tablas </h3>	
+	<table border="1">
+		<tr>
+			<th>Nombre</th>
+			<th>Apellidos</th>
+			<th>Pais</th>
+		</tr>
+		<tr>
+			<td>Jorge</td>
+			<td>Rodirguez</td>
+			<td>Mx</td>
+		</tr>
+		<tr>
+			<td>Cuca</td>
+			<td colspan="2">Garcia</td>			
+		</tr>
+	</table>
+	<hr/>
+	<h3>Formularios</h3>	
+	<form>
+		<p>
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre" placeholder="Escribe tu nombre"/>
+		</p>
+		<p>
+			<label for="descripcion"> Descripcion</label>
+			<textarea name="descripcion"></textarea>
+		</p>
+		<p>
+			<input type="radio" name="genero" value="hombre">Hombre<br/>
+			<input type="radio" name="genero" value="mujer">Mujer<br/>
+			<input type="radio" name="genero" value="nada">Nada<br/>
+			
+		</p>
+		<p>
+			<select name="genero2">
+				<option value="hombre">Hombre</option>
+				<option value="mujer">Mujer</option>
+				<option value="nada">Nada</option>
+			</select>
+		</p>
+		<p>
+			<input type="submit" value="Enviar formulario"/>
+		</p>
+	</form>
+</body>
+</html>
