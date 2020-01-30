@@ -1,0 +1,56 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+ul li{
+    font-size: 20px;
+}
+
+ul li:first-child{
+    color: purple;
+    font-weight: bold;
+}
+
+ul li:nth-child(3){
+    color: orange;
+    font-weight: bold;
+}
+
+ul li:last-child{
+    color: grey;
+    font-weight: bold;
+}
+
+#mi-enlace{
+    font-size: 20px;
+    color: lightsalmon;
+}
+
+
+#mi-enlace:link{
+    color: red;
+}
+
+
+#mi-enlace:visited{
+    color: orangered;
+}
+
+#mi-enlace:hover{
+    color: blue;
+}
+
+#mi-enlace:active{
+    color: green;
+    font-family: "Comic Sans MS";
+}
+
+input[type="text"]{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+input[type="text"]:focus{
+    border: 4px dashed red;
+}
