@@ -1,0 +1,150 @@
+// VARIABLES
+$fuente-tipica: sans-serif, Helvetica, Arial;
+$color-fondo: #ccc;
+$color-letra: red;
+$color-secundario: rgb(122,20,20);
+
+
+
+//USO DE VARIABLES
+body{
+    //background-color: $color-fondo;
+}
+
+h1{
+    font-family:  $fuente-tipica;
+    color: $color-letra;
+}
+
+p{
+    color: $color-secundario;
+}
+
+
+
+
+//ANIDACION
+.caja{
+
+    border: 1px solid black;
+    width: 500px;
+    margin: 0px auto;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+
+    h1{
+        color: blue;
+    }
+
+    p{
+        color: green;
+    }
+
+    .info{
+        font-size: 10px;
+
+        .autor{
+            font-size: 15px;
+            color: orange;
+        }
+    }
+}
+
+//MIXINS / FUNCIONES
+
+@mixin crearBordes($color, $size, $shadow) {
+    border: $size solid $color;
+    border-radius: $size;
+    box-shadow: 0px 0px $size $shadow;
+}
+
+.caja{
+    @include crearBordes(red,10px,black);
+}
+
+.listado{
+    @include crearBordes(green, 5px, yellow);
+}
+
+
+
+//HERENCIA
+%alert{
+    border: 1px solid gray;
+    background: #eee;
+    color: gray;
+    padding: 10px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.alerta{
+    @extend %alert
+}
+
+.alert-danger{
+    @extend %alert;
+    color: red;
+    border-color: red;
+}
+
+.alert-success{
+    @extend %alert;
+    color: green;
+    border-color: green;
+}
+
+//OPERADOR
+.clearfix{
+    clear: both;
+}
+
+h1{
+    font-size: 20px+5px - 1px;
+}
+
+.cajas{
+    
+    width: 900px;
+    margin: 0px auto;
+
+}
+
+$caja: 200px;
+$wrap: 900px;
+
+.caja{
+    float: left;
+    //width: 100px/900px * 100%;
+    width: $caja / $wrap *100%;
+    margin: 10px;
+}
+
+//CONDICIONALES - IF
+$color-fondo: black; 
+
+h1{
+    @if $color-fondo == #ccc {
+        color: black;
+    }@else if $color-fondo == black{
+        color: lightsalmon;
+    }@else{
+        color: pink;
+    }
+}
+
+//FOR
+$contador:1;
+@for $contador from 1 through 10{
+    .listado ul li:nth-child(#{$contador}){
+        //color: orange;
+        font-size: $contador * 2px;
+
+    }
+}
+
+//EACH
+
+//WHILE
+
