@@ -1,0 +1,269 @@
+body{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/************************   EJERCICIO COMPLETO CON AREAS ******************************************/
+#website-areas *{
+    margin: 0px;
+    padding: 0px;
+}
+
+#website-areas{
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 70px 1fr 70px;
+
+    grid-template-areas: 
+        " cabecera cabecera cabecera cabecera cabecera"
+        " menu menu menu menu menu  "
+        " lateral contenido contenido contenido contenido "
+        " pie pie pie pie pie ";
+
+    /*Espaciado entre elementos*/
+    grid-gap: 20px;
+
+    /*Espaciado entre columnas o row
+    grid-column-gap: 20px;*/
+    
+
+    width: 75%;
+    height: 1000px;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+
+}
+
+#website-areas #cabecera{
+    background: blue;
+    color: white;
+    
+    grid-area: cabecera;
+
+    /* Centrar contenido de la caja */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#website-areas #menu{
+    background: lightblue;
+    color: black;
+
+    grid-area: menu;
+    
+
+    line-height: 70px;    
+}
+
+#website-areas #menu ul{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    list-style: none;
+
+    
+}
+
+#website-areas #contenido{
+    background: #eee;
+     grid-area: contenido;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    padding: 20px;
+}
+
+#website-areas #contenido article{
+    background: #ccc;
+    border: 1px solid #555;
+}
+
+#website-areas #lateral{
+    background: orange;
+    color: white;
+
+    grid-area: lateral;
+    
+}
+
+#website-areas #piePagina{
+    background: black;
+    color: white;
+    
+    grid-area: pie;
+}
+
+
+/************************   EJERCICIO COMPLETO ******************************************/
+#website *{
+    margin: 0px;
+    padding: 0px;
+}
+
+#website{
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 70px 1fr 70px;
+
+    width: 75%;
+    height: 1000px;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+
+}
+
+#website #cabecera{
+    background: blue;
+    color: white;
+    grid-column: 1 / 6;
+
+    /* Centrar contenido de la caja */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#website #menu{
+    background: lightblue;
+    color: black;
+    grid-column: 1 / 6;
+
+    line-height: 70px;    
+}
+
+#website #menu ul{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    list-style: none;
+
+    
+}
+
+#website #contenido{
+    background: #eee;
+    grid-column: 1 / 5;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    padding: 20px;
+}
+
+#website #contenido article{
+    background: #ccc;
+    border: 1px solid #555;
+}
+
+#website #lateral{
+    background: orange;
+    color: white;
+    grid-column: 5 / 6;
+}
+
+#website #piePagina{
+    background: black;
+    color: white;
+    grid-column: 1 / 6;
+}
+
+
+
+
+/************************   EJEMPLOS ******************************************/
+.layout{
+    border: 3px solid orangered;
+    padding: 10px;
+
+    width: 80%;
+    margin: 0px auto;
+
+    min-height: 600px;
+    /*height: 80vh;*/
+
+    /*Definir contenedor de grid layout*/
+    display: grid;
+
+    /*Ejemplo para indicar 4 columnas
+    grid-template-columns: 50% 25% 15 % 10%; */
+
+    /*Ejemplo para indicar 2 columnas 
+    grid-template-columns: 50% 45%; */
+
+    /*grid-template-columns: repeat(4,calc(25% - 10px));*/
+
+    /*grid-template-columns: repeat(2,calc(25% - 10px)) 15% 35%;*/
+
+    /*grid-template-columns: 1fr 1fr 1fr 1fr ;*/
+    grid-template-columns: repeat(3, 1fr);
+
+    /*grid-template-rows: 1fr 1fr;/*/
+    /*grid-template-rows: 50% 10% 40%;*/
+    /*grid-template-rows: 1fr 3fr 300px;*/
+    /*grid-template-rows: 1fr 3fr 1fr;*/
+    grid-template-rows: repeat(2,1fr) 3fr repeat(2,1fr) ;
+
+
+    /* Dar espaciado entre elementos grid*/
+    grid-gap: 10px;
+}
+
+.layout .caja{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+
+    background: gray;
+}
+
+.layout .red{
+    background: red;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.layout .green{
+    background: green;
+    /*
+    grid-row-start: 2;
+    grid-row-end: 4 ;
+    */
+    grid-row: 2 / 6;
+}
+
+.layout .blue{
+    background: blue;
+    grid-column: 2 / 4;
+}
+
+.layout .pink{
+    background: pink;
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+}
+
+.layout .orange{
+    background: orange;
+    grid-row: 3 / 5;
+}
+
+
+.layout .lightblue{
+    background: lightblue;
+    /*
+    grid-column-start: 1;
+    grid-column-end: 3;
+    */
+    grid-column: 2 / 4;
+}
+
